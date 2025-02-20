@@ -36,6 +36,7 @@ runs:
     - shell: bash
       run: |
         mkdir action-product
+        ls -R bazel-bin
         cp bazel-bin/visqol action-product/
         if [[ "${{inputs.platform}}" != "windows" ]]; then
           cp bazel-bin/*_pb2.py action-product/
